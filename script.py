@@ -69,7 +69,7 @@ def create_front_sprite(directory: str, margin=True, alpha=0):
         img_shiny_animation = margin_image_shiny_animation
 
     # Save result to output folder
-    img_animation[0].save(f'output/sprites/battlesprites/{name_to_dex[directory]}-front-n.gif', save_all=True, append_images=img_shiny_animation[1:], duration=img_frame_duration, disposal=2, loop=0)
+    img_animation[0].save(f'output/sprites/battlesprites/{name_to_dex[directory]}-front-n.gif', save_all=True, append_images=img_animation[1:], duration=img_frame_duration, disposal=2, loop=0)
     img_shiny_animation[0].save(f'output/sprites/battlesprites/{name_to_dex[directory]}-front-s.gif', save_all=True, append_images=img_shiny_animation[1:], duration=img_shiny_frame_duration, disposal=2, loop=0)    
     print(f'Created front battle sprites for {directory}')
 
